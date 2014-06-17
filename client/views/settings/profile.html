@@ -1,0 +1,62 @@
+<template name="profile">
+	<div  class="col-xs-12">
+		<div class="row">
+			<span class = "setting-head"><i class="fa fa-cogs setting-icon"></i>Settings</span>
+			<hr>
+			<form>
+				<div class="col-sm-offset-1 col-sm-4">
+					<div class="form-group">
+						<label for="user-name">Username</label>
+						<div class="input-group" data-validate="uniqueUserName">
+							<input type="text" class="form-control" name="user-name" id="user-name" placeholder="Enter a Unique Username!" value = "{{userName}}" required>
+							<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="first-name">First Name</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter Your First Name!" value="{{firstName}}" required>
+							<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="last-name">Last Name</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="last-name" id="last-name" placeholder="Enter Your Last Name!" value="{{lastName}}" required>
+							<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-offset-2 col-sm-4">
+					<div class="form-group">
+						<label for="age">Age</label>
+						<div class="input-group" data-validate="number">
+							<input type="text" class="form-control" name="age" id="age" placeholder="Enter Your Age!" value = "{{age}}" required>
+							<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="gender-type">Gender</label>
+						<div class="input-group full-form">
+							<select class="form-control" name="gender" id="gender" value="{{gender}}" required>
+								<option value="Male">Male</option>
+								<option value='Female'>Female</option>
+								<option value='Other'>Other</option>
+							</select>
+							<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+						</div>
+					</div>
+
+					<div class="setting-buttons">
+						<button class = "btn btn-primary">Cancel</button>
+						<input type="submit" class = "btn btn-info" id="save-profile" val="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+		{{changeForm}}
+	</div>
+</template>
