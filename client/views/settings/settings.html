@@ -1,7 +1,7 @@
 <template name="settings">
 	<div  class="col-xs-12">
 	<div class="row">
-		<h2>Creation Zone</h2>
+		<span class = "setting-head"><i class="fa fa-cogs setting-icon"></i>Settings</span>
 		<hr>
 			<div class="col-sm-offset-1 col-sm-4">
 				<div class="form-group">
@@ -13,28 +13,35 @@
 				</div>
 
 				<div class="form-group">
-					<label for="create-name">First Name</label>
+					<label for="first-name">First Name</label>
 					<div class="input-group">
-						<input type="text" class="form-control" name="create-name" id="create-name" placeholder="Enter Your First Name!" required>
+						<input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter Your First Name!" required>
 						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="create-name">Last Name</label>
+					<label for="last-name">Last Name</label>
 					<div class="input-group">
-						<input type="text" class="form-control" name="create-name" id="create-name" placeholder="Enter Your Last Name!" required>
+						<input type="text" class="form-control" name="last-name" id="last-name" placeholder="Enter Your Last Name!" required>
 						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="creation-type">Type</label>
+					<label for="age">Age</label>
+					<div class="input-group" data-validate="uniqueUserName">
+						<input type="text" class="form-control" name="age" id="age" placeholder="Enter Your Last Name!" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="gender-type">Gender</label>
 					<div class="input-group full-form">
-						<select class="form-control" name="creation-type" id="creation-type" required>
-							<option value="challenge">Challenge</option>
-							<option value='event'>Event</option>
-
+						<select class="form-control" name="gender-type" id="gender-type" required>
+							<option value="challenge">Male</option>
+							<option value='event'>Female</option>
+							<option value='event'>Other</option>
 						</select>
 					</div>
 				</div>
