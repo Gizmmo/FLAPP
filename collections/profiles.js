@@ -26,6 +26,8 @@ Meteor.methods({
 			firstName: capitaliseFirstLetter(profileAttributes.firstName),
 			lastName: capitaliseFirstLetter(profileAttributes.lastName),
 			userName: capitaliseFirstLetter(profileAttributes.userName),
+			age: 0,
+			gender: "male",
 			points: 0,
 			level: 1,
 			// userID: user._id,
@@ -90,6 +92,18 @@ Meteor.methods({
 		} else {
 			throw new Meteor.Error(423, 'Username already used by another user');
 		}
+	},
+
+	updateProfileAge: function(age) {
+		var userid = Meteor.user()._id;
+		var found = Profiles.findOne( { 'userID': userid } );
+		Profiles.update(found._id, { $set: { 'age': age } } );
+	},
+
+	updateProfileGender: function(gender) {
+		var userid = Meteor.user()._id;
+		var found = Profiles.findOne( { 'userID': userid } );
+		Profiles.update(found._id, {$set: {'gender': capitaliseFirstLetter(gender) }});
 	},
 
 	incrementPoints: function(id, points){

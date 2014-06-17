@@ -18,7 +18,14 @@ $('.input-group input[required], .input-group textarea[required], .input-group s
 			state = !isNaN(parseFloat($(this).val())) && isFinite($(this).val());
 		} else if($group.data('validate') == 'uniqueUserName'){
 			if($(this).val().length > 0){
-				state = Profiles.findOne({'userName' : capitaliseFirstLetter($(this).val())}) === undefined;
+				var prof = Profiles.findOne({'userName' : capitaliseFirstLetter($(this).val())})
+				if(prof === undefined) {
+					console.log("uname und");
+					state = true;
+				} else {
+					console.log("else");
+					state = $(this).val() === prof.userName ? true : false
+				}
 			} else {
 				state = false;
 			}
