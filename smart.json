@@ -1,0 +1,15 @@
+{
+  "packages": {
+    "iron-router": {},
+    "accounts-entry": {},
+    "bootstrap-3": {},
+    "twit": {},
+    "googlemaps": {},
+    "semantic-ui": {},
+    "font-awesome": {},
+    "animate-css": {},
+    "moment": {},
+    "bootstrap3-datetimepicker": {},
+    "accounts-ui-bootstrap-dropdown": {}
+  }
+}

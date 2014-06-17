@@ -1,0 +1,78 @@
+<template name="settings">
+	<div  class="col-xs-12">
+	<div class="row">
+		<h2>Creation Zone</h2>
+		<hr>
+			<div class="col-sm-offset-1 col-sm-4">
+				<div class="form-group">
+					<label for="user-name">Username</label>
+					<div class="input-group" data-validate="uniqueUserName">
+						<input type="text" class="form-control" name="user-name" id="user-name" placeholder="Enter a Unique Username!" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="create-name">First Name</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="create-name" id="create-name" placeholder="Enter Your First Name!" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="create-name">Last Name</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="create-name" id="create-name" placeholder="Enter Your Last Name!" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="creation-type">Type</label>
+					<div class="input-group full-form">
+						<select class="form-control" name="creation-type" id="creation-type" required>
+							<option value="challenge">Challenge</option>
+							<option value='event'>Event</option>
+
+						</select>
+					</div>
+				</div>
+
+				<div class="input-group datetimepicker ">
+					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+					<input class="set-due-date form-control event-article" id="datetime" type="text"/>
+				</div>
+
+			</div>
+
+			<div class="col-sm-offset-2 col-sm-4">
+				<div class="form-group ">
+					<label for="creation-selection">Select the Location</label>
+
+					<div id="creation-selection" name="creation-selection"></div>	
+				</div>
+
+				<div class="form-group">
+					<label for="longitude">Longitude</label>
+					<div class="input-group" data-validate="number">
+						<input type="text" class="form-control" name="longitude" id="longitude" placeholder="Longitude" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label for="latitude">Latitude</label>
+					<div class="input-group" data-validate="number">
+						<input type="text" class="form-control" name="latitude" id="latitude" placeholder="Latitude" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+
+				<button class="btn btn-success full-form" id="submit">Create</button>
+
+			</div>
+	</div>
+</div>
+</template>
